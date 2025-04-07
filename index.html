@@ -91,7 +91,7 @@
             document.getElementById("container-vreme").appendChild(element)
 
             element.innerHTML = `<img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_square_medium.gif"/>`
-            const req_loc = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${nume}&limit=1&appid=${API_KEY}`)
+            const req_loc = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${nume}&limit=1&appid=${API_KEY}`)
             if (req_loc.status !== 200) {
                 element.innerHTML = `<h1>A fost o eroare in gasirea locatiei</h1>`
                 return console.error(req_loc)
