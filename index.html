@@ -41,7 +41,6 @@
         [id^="continut-vreme"] {
             min-width: 300px;
             border-radius: 8px;
-            background-color: rgba(0, 0, 0, 0.3);
             width: auto;
             margin: 16px;
             padding: 16px;
@@ -63,6 +62,7 @@
     </select>
 
     <div id="container-vreme">
+        <div id="continut-vreme"></div>
     </div>
 
     <script>
@@ -83,12 +83,9 @@
             return string.split(" ").map((w, i) => i === 0 ? `${w.substring(0, 1).toUpperCase()}${w.substring(1).toLowerCase()}` : w.toLowerCase()).join(" ")
         }
 
-        let i = 0 
         async function vremeOras(nume) {
-
-            const element = document.createElement("div")
-            element.id = `continut-vreme-${++i}`
-            document.getElementById("container-vreme").appendChild(element)
+            const element = document.getElementById("continut-vreme")
+            document.getElementById("continut-vreme").style.backgroundColor = "rgba(0, 0, 0, 0.3)"
 
             element.innerHTML = `<img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_square_medium.gif"/>`
             const req_loc = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${nume}&limit=1&appid=${API_KEY}`)
