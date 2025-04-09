@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background: linear-gradient(131deg, skyblue, #73c7ec, blue);
+    min-height: 100vh;
+}
+
+.titlu {
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+.titlu h1 {
+    margin: 0;
+}
+
+input, button, select {
+    border-radius: 4px;
+    border: 1px solid black;
+    background: linear-gradient(229deg, #eaeaea, white, #eaeaea);
+}
+
+#container-vreme {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+[id^="continut-vreme"] {
+    min-width: 300px;
+    border-radius: 8px;
+    width: auto;
+    margin: 16px;
+    padding: 0 16px 16px 16px;
+}
